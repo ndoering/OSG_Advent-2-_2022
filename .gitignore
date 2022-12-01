@@ -57,4 +57,5 @@ GRTAGS
 GPATH
 
 # AOC executables
-aoc1
+aoc*
+!*.c
