@@ -55,3 +55,6 @@ dkms.conf
 GTAGS
 GRTAGS
 GPATH
+
+# AOC executables
+aoc1
