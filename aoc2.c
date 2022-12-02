@@ -23,6 +23,9 @@ int thread_function(void *args)
 int main(void)
 {
 	void *child_stack = malloc(1024*1024);
+	if (!child_stack) {
+		return -1;
+	}
 
 	int child_pid = clone(&thread_function, child_stack, CLONE_VM | CLONE_IO | CLONE_FS | CLONE_FILES, NULL);
 
@@ -34,7 +37,5 @@ int main(void)
 	printf("Main PID: %u, Main PPID: %u\n", main_pid, main_ppid);
 
 	wait(NULL);
-
-	free(child_stack);
 	return 0;
 }
