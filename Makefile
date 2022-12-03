@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -std=c11 -Og -g -ggdb -Werror -Wpedantic -Wall
-TARGETS := aoc1 aoc2
+TARGETS := aoc1 aoc2 aoc3
 
 all: $(TARGETS)
 
